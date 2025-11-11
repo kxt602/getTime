@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Time API</title>
+</head>
+<body>
+<script>
+var now = new Date();
+var sysTime1 = now.getFullYear() + 
+               String(now.getMonth()+1).padStart(2,'0') + 
+               String(now.getDate()).padStart(2,'0') + 
+               String(now.getHours()).padStart(2,'0') + 
+               String(now.getMinutes()).padStart(2,'0') + 
+               String(now.getSeconds()).padStart(2,'0');
+               
+var sysTime2 = now.getFullYear() + '-' + 
+               String(now.getMonth()+1).padStart(2,'0') + '-' + 
+               String(now.getDate()).padStart(2,'0') + ' ' + 
+               String(now.getHours()).padStart(2,'0') + ':' + 
+               String(now.getMinutes()).padStart(2,'0') + ':' + 
+               String(now.getSeconds()).padStart(2,'0');
+
+document.write(JSON.stringify({
+    "sysTime1": sysTime1,
+    "sysTime2": sysTime2
+}));
+</script>
+</body>
+</html>
